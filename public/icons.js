@@ -1,90 +1,161 @@
 // Custom SVG Weather Icons
 const weatherIcons = {
-  // Clear Sky - Sun
-  clear: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="100" cy="100" r="45" fill="#FFD700"/>
-    <line x1="100" y1="20" x2="100" y2="40" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-    <line x1="100" y1="160" x2="100" y2="180" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-    <line x1="20" y1="100" x2="40" y2="100" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-    <line x1="160" y1="100" x2="180" y2="100" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-    <line x1="35" y1="35" x2="50" y2="50" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-    <line x1="150" y1="150" x2="165" y2="165" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-    <line x1="165" y1="35" x2="150" y2="50" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
-    <line x1="50" y1="150" x2="35" y2="165" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+  clear: `<svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#F7C948" stroke-width="10" stroke-linecap="round">
+      <path d="M110 18v24"/>
+      <path d="M110 178v24"/>
+      <path d="M18 110h24"/>
+      <path d="M178 110h24"/>
+      <path d="M46 46l17 17"/>
+      <path d="M157 157l17 17"/>
+      <path d="M174 46l-17 17"/>
+      <path d="M63 157l-17 17"/>
+    </g>
+    <circle cx="110" cy="110" r="52" fill="#FFE27A"/>
+    <circle cx="95" cy="94" r="10" fill="#FFF1B8" opacity="0.8"/>
+    <circle cx="127" cy="82" r="7" fill="#F7C948" opacity="0.7"/>
+    <circle cx="137" cy="121" r="6" fill="#F7C948" opacity="0.5"/>
   </svg>`,
 
-  // Cloudy - Single Cloud
-  cloudy: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-    <path d="M 80 120 C 50 120 30 100 30 75 C 30 55 42 38 60 35 C 65 22 77 15 92 15 C 110 15 125 25 132 40 C 145 38 157 45 157 60 C 157 80 143 100 120 108 C 200 108 260 130 260 160 C 260 185 240 205 215 205 L 85 205 C 50 205 25 180 25 150 C 25 125 42 105 65 100" fill="#4DD0E1" stroke="none"/>
+  clearNight: `<svg viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="176" cy="84" r="56" fill="#FFE78A"/>
+    <circle cx="202" cy="72" r="52" fill="#6A86D9"/>
+    <circle cx="74" cy="54" r="5" fill="#F6F7FF"/>
+    <circle cx="103" cy="30" r="4" fill="#DCE6FF"/>
+    <circle cx="56" cy="96" r="3.5" fill="#E7EDFF"/>
   </svg>`,
 
-  // Rainy - Cloud with Rain
-  rainy: `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-    <path d="M 80 120 C 50 120 30 100 30 75 C 30 55 42 38 60 35 C 65 22 77 15 92 15 C 110 15 125 25 132 40 C 145 38 157 45 157 60 C 157 80 143 100 120 108 C 200 108 260 130 260 160 C 260 185 240 205 215 205 L 85 205 C 50 205 25 180 25 150 C 25 125 42 105 65 100" fill="#4DD0E1" stroke="none"/>
-    <line x1="70" y1="230" x2="60" y2="270" stroke="#4DD0E1" stroke-width="6" stroke-linecap="round"/>
-    <line x1="130" y1="230" x2="120" y2="270" stroke="#4DD0E1" stroke-width="6" stroke-linecap="round"/>
-    <line x1="190" y1="230" x2="180" y2="270" stroke="#4DD0E1" stroke-width="6" stroke-linecap="round"/>
+  cloudy: `<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      <circle cx="118" cy="118" r="36" fill="#F6F8FF"/>
+      <circle cx="168" cy="100" r="44" fill="#F9FBFF"/>
+      <circle cx="214" cy="122" r="34" fill="#F2F6FF"/>
+      <rect x="86" y="122" width="160" height="44" rx="22" fill="#F7FAFF"/>
+      <ellipse cx="154" cy="164" rx="88" ry="12" fill="#9FB3E5" opacity="0.35"/>
+      <circle cx="119" cy="92" r="3" fill="#9AB3EB"/>
+      <circle cx="97" cy="103" r="3" fill="#9AB3EB"/>
+      <circle cx="225" cy="108" r="3" fill="#9AB3EB"/>
+      <circle cx="239" cy="124" r="3" fill="#9AB3EB"/>
+    </g>
   </svg>`,
 
-  // Snowy - Cloud with Snow
-  snowy: `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-    <path d="M 80 120 C 50 120 30 100 30 75 C 30 55 42 38 60 35 C 65 22 77 15 92 15 C 110 15 125 25 132 40 C 145 38 157 45 157 60 C 157 80 143 100 120 108 C 200 108 260 130 260 160 C 260 185 240 205 215 205 L 85 205 C 50 205 25 180 25 150 C 25 125 42 105 65 100" fill="#4DD0E1" stroke="none"/>
-    <circle cx="70" cy="250" r="5" fill="#E0F7FA"/>
-    <circle cx="100" cy="260" r="5" fill="#E0F7FA"/>
-    <circle cx="130" cy="250" r="5" fill="#E0F7FA"/>
-    <circle cx="160" cy="265" r="5" fill="#E0F7FA"/>
-    <circle cx="190" cy="250" r="5" fill="#E0F7FA"/>
-    <circle cx="85" cy="280" r="5" fill="#E0F7FA"/>
-    <circle cx="145" cy="285" r="5" fill="#E0F7FA"/>
+  cloudyNight: `<svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="208" cy="72" r="54" fill="#FFE78A"/>
+    <circle cx="232" cy="60" r="49" fill="#23347A"/>
+    <circle cx="112" cy="136" r="36" fill="#F6F8FF"/>
+    <circle cx="164" cy="118" r="46" fill="#FAFBFF"/>
+    <circle cx="212" cy="138" r="34" fill="#F0F5FF"/>
+    <rect x="82" y="138" width="164" height="44" rx="22" fill="#F8FAFF"/>
+    <ellipse cx="162" cy="181" rx="92" ry="12" fill="#9FB3E5" opacity="0.32"/>
+    <circle cx="90" cy="72" r="4" fill="#EEF3FF"/>
+    <circle cx="62" cy="98" r="3" fill="#D9E4FF"/>
   </svg>`,
 
-  // Stormy - Dark Cloud with Lightning
-  stormy: `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-    <path d="M 80 120 C 50 120 30 100 30 75 C 30 55 42 38 60 35 C 65 22 77 15 92 15 C 110 15 125 25 132 40 C 145 38 157 45 157 60 C 157 80 143 100 120 108 C 200 108 260 130 260 160 C 260 185 240 205 215 205 L 85 205 C 50 205 25 180 25 150 C 25 125 42 105 65 100" fill="#455A64" stroke="none"/>
-    <polyline points="180,220 200,260 185,265 210,300 160,270" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linejoin="round"/>
+  rainy: `<svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="116" cy="108" r="36" fill="#F6F8FF"/>
+    <circle cx="168" cy="92" r="44" fill="#FAFBFF"/>
+    <circle cx="216" cy="114" r="34" fill="#F1F6FF"/>
+    <rect x="84" y="114" width="166" height="46" rx="23" fill="#F7FAFF"/>
+    <path d="M118 188c0-10 14-25 14-25s14 15 14 25a14 14 0 1 1-28 0Z" fill="#75A9FF"/>
+    <path d="M164 212c0-10 14-25 14-25s14 15 14 25a14 14 0 1 1-28 0Z" fill="#75A9FF"/>
+    <path d="M210 188c0-10 14-25 14-25s14 15 14 25a14 14 0 1 1-28 0Z" fill="#75A9FF"/>
   </svg>`,
 
-  // Mostly Clear - Sun behind small cloud
-  partlyCloudy: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="80" cy="60" r="40" fill="#FFD700"/>
-    <path d="M 120 110 C 100 110 85 100 85 85 C 85 72 93 62 105 60 C 108 50 116 45 125 45 C 138 45 150 53 155 65 C 165 64 173 72 173 82 C 173 95 163 110 150 115 C 200 115 250 140 250 175 C 250 195 233 210 212 210 L 100 210 C 70 210 50 190 50 165 C 50 145 63 130 80 125" fill="#4DD0E1" stroke="none"/>
+  snowy: `<svg viewBox="0 0 320 300" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="116" cy="108" r="36" fill="#F6F8FF"/>
+    <circle cx="168" cy="92" r="44" fill="#FAFBFF"/>
+    <circle cx="216" cy="114" r="34" fill="#F1F6FF"/>
+    <rect x="84" y="114" width="166" height="46" rx="23" fill="#F7FAFF"/>
+    <g stroke="#F8FBFF" stroke-width="5" stroke-linecap="round">
+      <path d="M118 188v28"/>
+      <path d="M104 202h28"/>
+      <path d="M108 192l20 20"/>
+      <path d="M128 192l-20 20"/>
+      <path d="M170 198v28"/>
+      <path d="M156 212h28"/>
+      <path d="M160 202l20 20"/>
+      <path d="M180 202l-20 20"/>
+      <path d="M222 188v28"/>
+      <path d="M208 202h28"/>
+      <path d="M212 192l20 20"/>
+      <path d="M232 192l-20 20"/>
+    </g>
+    <circle cx="142" cy="236" r="5" fill="#F6FAFF"/>
+    <circle cx="198" cy="246" r="5" fill="#F6FAFF"/>
   </svg>`,
 
-  // Fog - Layered clouds
-  foggy: `<svg viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="150" cy="60" rx="90" ry="50" fill="#B3E5FC" opacity="0.7"/>
-    <ellipse cx="150" cy="110" rx="100" ry="50" fill="#81D4FA" opacity="0.8"/>
-    <ellipse cx="150" cy="160" rx="110" ry="50" fill="#4DD0E1" opacity="0.9"/>
+  stormy: `<svg viewBox="0 0 320 300" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="116" cy="108" r="36" fill="#DCE3F5"/>
+    <circle cx="168" cy="92" r="44" fill="#EEF2FA"/>
+    <circle cx="216" cy="114" r="34" fill="#DAE1F0"/>
+    <rect x="84" y="114" width="166" height="46" rx="23" fill="#E8EEF9"/>
+    <path d="M176 168 142 226h28l-18 56 56-76h-32l18-38Z" fill="#FFD95E"/>
+  </svg>`,
+
+  partlyCloudy: `<svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#F7C948" stroke-width="8" stroke-linecap="round">
+      <path d="M98 20v20"/>
+      <path d="M98 116v20"/>
+      <path d="M50 68h20"/>
+      <path d="M126 68h20"/>
+      <path d="M64 34l14 14"/>
+      <path d="M132 102l14 14"/>
+      <path d="M146 34 132 48"/>
+      <path d="M78 102 64 116"/>
+    </g>
+    <circle cx="98" cy="68" r="34" fill="#FFE27A"/>
+    <circle cx="134" cy="134" r="32" fill="#F6F8FF"/>
+    <circle cx="180" cy="120" r="40" fill="#FAFBFF"/>
+    <circle cx="222" cy="138" r="30" fill="#F1F6FF"/>
+    <rect x="106" y="138" width="150" height="40" rx="20" fill="#F8FAFF"/>
+    <ellipse cx="178" cy="178" rx="82" ry="10" fill="#9FB3E5" opacity="0.3"/>
+  </svg>`,
+
+  foggy: `<svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="120" cy="96" r="34" fill="#F6F8FF"/>
+    <circle cx="170" cy="82" r="42" fill="#FAFBFF"/>
+    <circle cx="214" cy="102" r="32" fill="#EFF4FF"/>
+    <rect x="88" y="102" width="160" height="42" rx="21" fill="#F7FAFF"/>
+    <g fill="#F7FAFF" opacity="0.96">
+      <rect x="72" y="162" width="154" height="24" rx="12"/>
+      <rect x="92" y="192" width="136" height="22" rx="11"/>
+      <rect x="122" y="220" width="90" height="18" rx="9"/>
+    </g>
+    <circle cx="112" cy="112" r="3" fill="#A4B8EA"/>
+    <circle cx="96" cy="96" r="3" fill="#A4B8EA"/>
+    <circle cx="228" cy="104" r="3" fill="#A4B8EA"/>
   </svg>`,
 };
 
 // Function to get SVG icon for weather code
 function getWeatherIcon(weatherCode) {
   const iconMap = {
-    0: weatherIcons.clear, // Clear Sky
-    1: weatherIcons.clear, // Mainly Clear
-    2: weatherIcons.partlyCloudy, // Partly Cloudy
-    3: weatherIcons.cloudy, // Overcast
-    45: weatherIcons.foggy, // Foggy
-    48: weatherIcons.foggy, // Foggy (depositing rime)
-    51: weatherIcons.rainy, // Light Drizzle
-    53: weatherIcons.rainy, // Moderate Drizzle
-    55: weatherIcons.rainy, // Dense Drizzle
-    61: weatherIcons.rainy, // Slight Rain
-    63: weatherIcons.rainy, // Moderate Rain
-    65: weatherIcons.stormy, // Heavy Rain
-    71: weatherIcons.snowy, // Slight Snow
-    73: weatherIcons.snowy, // Moderate Snow
-    75: weatherIcons.snowy, // Heavy Snow
-    77: weatherIcons.snowy, // Snow Grains
-    80: weatherIcons.rainy, // Slight Rain Showers
-    81: weatherIcons.rainy, // Moderate Rain Showers
-    82: weatherIcons.stormy, // Violent Rain Showers
-    85: weatherIcons.snowy, // Slight Snow Showers
-    86: weatherIcons.snowy, // Heavy Snow Showers
-    95: weatherIcons.stormy, // Thunderstorm
-    96: weatherIcons.stormy, // Thunderstorm with Hail
-    99: weatherIcons.stormy, // Thunderstorm with Hail
+    0: weatherIcons.clear,
+    1: weatherIcons.clear,
+    2: weatherIcons.partlyCloudy,
+    3: weatherIcons.cloudy,
+    45: weatherIcons.foggy,
+    48: weatherIcons.foggy,
+    51: weatherIcons.rainy,
+    53: weatherIcons.rainy,
+    55: weatherIcons.rainy,
+    61: weatherIcons.rainy,
+    63: weatherIcons.rainy,
+    65: weatherIcons.stormy,
+    71: weatherIcons.snowy,
+    73: weatherIcons.snowy,
+    75: weatherIcons.snowy,
+    77: weatherIcons.snowy,
+    80: weatherIcons.rainy,
+    81: weatherIcons.rainy,
+    82: weatherIcons.stormy,
+    85: weatherIcons.snowy,
+    86: weatherIcons.snowy,
+    95: weatherIcons.stormy,
+    96: weatherIcons.stormy,
+    99: weatherIcons.stormy,
+    "clear-night": weatherIcons.clearNight,
+    "cloudy-night": weatherIcons.cloudyNight,
   };
 
   return iconMap[weatherCode] || weatherIcons.cloudy;

@@ -8,21 +8,21 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-card">
-        <div class="search-box">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search city..."
-            class="search-input"
-          />
-          <button id="searchBtn" class="search-btn">Search</button>
-        </div>
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search city..."
+          class="search-input"
+        />
+        <button id="searchBtn" class="search-btn">Search</button>
+      </div>
 
+      <div class="weather-card">
         <div id="weatherContent" class="weather-content hidden">
           <div class="weather-header">
-            <h2 id="cityName" class="city-name"></h2>
             <p id="date" class="date"></p>
+            <h2 id="cityName" class="city-name"></h2>
           </div>
 
           <div class="weather-main">
@@ -51,6 +51,8 @@
               <span id="pressure" class="detail-value"></span>
             </div>
           </div>
+
+          <div id="dayBadge" class="day-badge"></div>
         </div>
 
         <div id="errorMessage" class="error-message hidden"></div>
